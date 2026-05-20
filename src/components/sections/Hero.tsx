@@ -97,7 +97,7 @@ export default function Hero() {
           className="mb-4 flex items-center gap-2 font-sans text-[11px] font-semibold uppercase tracking-[0.2em] text-gold/80"
         >
           <span className="h-px w-5 bg-gold/60" />
-          Residenza · Cabiate
+          Residenza per anziani autosufficienti · Cabiate
         </motion.p>
 
         {/* Headline */}
@@ -133,7 +133,7 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.9 }}
           className="mb-7 font-sans text-base leading-relaxed text-white/65"
         >
-          Una casa vera. Max&nbsp;10 ospiti,<br />ogni persona conosciuta per nome.
+          Per anziani autosufficienti. Max&nbsp;10 ospiti,<br />ogni persona conosciuta per nome.
         </motion.p>
 
         {/* CTA */}
@@ -175,7 +175,7 @@ export default function Hero() {
         >
           <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-gold" />
           <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.18em] text-gold/90">
-            Cabiate · Como · Residenza familiare · Max 10 ospiti
+            Cabiate · Como · Anziani autosufficienti · Max 10 ospiti
           </span>
         </motion.div>
 
@@ -204,8 +204,8 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 1.0 }}
           className="mx-auto mt-7 max-w-lg font-sans text-lg leading-relaxed text-white/75 md:text-xl"
         >
-          Non una struttura. Una casa vera a Cabiate, con max&nbsp;10 ospiti,
-          dove ogni persona è conosciuta per nome.
+          Una residenza per anziani autosufficienti a Cabiate, con max&nbsp;10 ospiti.
+          Assistenza discreta, sempre presente, mai invasiva.
         </motion.p>
 
         {/* CTAs */}
@@ -237,7 +237,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 1.6 }}
           className="mt-14 flex flex-wrap justify-center gap-x-8 gap-y-3"
         >
-          {['Assistenza OSS 24 ore su 24', 'Pasti freschi ogni giorno', 'Progetto di vita individuale', 'Max 10 ospiti'].map((b) => (
+          {['Assistenza discreta 24 ore su 24', 'Pasti freschi ogni giorno', 'Progetto di vita individuale', 'Max 10 ospiti'].map((b) => (
             <span key={b} className="flex items-center gap-2 font-sans text-sm text-white/60">
               <span className="text-gold">✦</span> {b}
             </span>

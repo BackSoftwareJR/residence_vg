@@ -57,7 +57,7 @@ export const siteConfig = {
     defaultTitle: "Residence V.G — Casa per Anziani a Cabiate (CO)",
     titleTemplate: "%s | Residence V.G Cabiate",
     defaultDescription:
-      "Residence per anziani a Cabiate, provincia di Como. Assistenza 24h, max 10 ospiti, ambiente familiare. Chiama: 035 195 812 35.",
+      "Residence per anziani autosufficienti e parzialmente autosufficienti a Cabiate (CO). Assistenza discreta 24h, max 10 ospiti, ambiente familiare. Chiama: +39 351 958 1235.",
     ogImage: "/images/hero-fallback.jpg",
     themeColor: "#2D3A2E",
   },
@@ -107,7 +107,7 @@ export const pricing = {
     note: "Versata all'ingresso, a garanzia del posto",
   },
   includedNote:
-    "I prezzi includono: vitto, alloggio, pulizia camera e spazi comuni, assistenza OSS 24h, attività ricreative.",
+    "I prezzi includono: vitto, alloggio, pulizia camera e spazi comuni, assistenza discreta 24 ore su 24, attività ricreative.",
 } as const;
 
 // ── SERVIZI ──────────────────────────────────────────────────────────────────
@@ -116,10 +116,10 @@ export const services = [
     id: "assistenza",
     icon: "shield-heart",
     title: "Assistenza 24 ore su 24",
-    summary: "Personale OSS e infermieri sempre presenti, di giorno e di notte.",
+    summary: "Presenza discreta e continua, giorno e notte. Sempre vicini, mai invasivi.",
     description:
-      "Il nostro personale qualificato è disponibile ogni ora del giorno e della notte. Operatori Socio Sanitari (OSS) e infermieri garantiscono supporto continuo, monitoraggio della salute e assistenza personalizzata per ogni ospite.",
-    highlights: ["OSS certificati", "Infermieri qualificati", "Reperibilità notturna", "Protocolli emergenza"],
+      "Il nostro personale è presente ogni ora del giorno e della notte — non per sostituire l'autonomia, ma per supportarla. Un'assistenza pensata per chi è autosufficiente e vuole continuare a vivere con libertà, sapendo che c'è sempre qualcuno a portata di mano.",
+    highlights: ["Presenza continua h24", "Mai invasivi", "Rispetto dell'autonomia", "Reperibilità notturna"],
   },
   {
     id: "vitto",
@@ -275,7 +275,7 @@ export const faqs = [
     id: "faq-3",
     question: "Cosa è incluso nel prezzo mensile?",
     answer:
-      "Il prezzo mensile include: alloggio, vitto (3 pasti + spuntini), pulizia della camera e spazi comuni, cambio biancheria, assistenza OSS 24h, attività ricreative.",
+      "Il prezzo mensile include: alloggio, vitto (3 pasti + spuntini), pulizia della camera e spazi comuni, cambio biancheria, assistenza discreta 24 ore su 24, attività ricreative.",
   },
   {
     id: "faq-4",
