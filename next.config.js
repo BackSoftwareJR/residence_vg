@@ -29,9 +29,16 @@ const nextConfig = {
     ];
   },
 
-  // Redirect pagine legacy (se si migra dal vecchio dominio)
+  // Canonical non-www: www.vgresidence.com → vgresidence.com
   async redirects() {
-    return [];
+    return [
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'www.vgresidence.com' }],
+        destination: 'https://vgresidence.com/:path*',
+        permanent: true,
+      },
+    ];
   },
 };
 

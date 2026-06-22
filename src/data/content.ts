@@ -13,7 +13,7 @@ export const siteConfig = {
   tagline: "Libertà, accoglienza, empatia e rispetto",
   description:
     "Residence per anziani autosufficienti e parzialmente autosufficienti a Cabiate (CO). Palazzina di 3 piani, massimo 10 ospiti, assistenza 24 ore su 24.",
-  url: "https://www.vgresidence.com",
+  url: "https://vgresidence.com",
   piva: "14407090969",
 
   // ── CONTATTI ────────────────────────────────────────────────────────────────
