@@ -2,28 +2,52 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import { siteConfig } from '@/data/content';
 import LocationMap from '@/components/ui/location-map';
+import { createPageMetadata } from '@/lib/seo';
+import { BreadcrumbListSchema } from '@/components/JsonLd';
+import Breadcrumbs from '@/components/blog/Breadcrumbs';
 import { Phone, Mail, MapPin, Clock, MessageSquare } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'Dove Siamo',
-  description: `Residence V.G si trova in Via Francesco Petrarca 14, 22060 Cabiate (CO). Raggiungici in auto, treno o mezzi pubblici.`,
-  alternates: { canonical: '/dove-siamo' },
-};
+export const metadata: Metadata = createPageMetadata({
+  title: 'Come Arrivare a Residence V.G - Cabiate (CO) | Residenza Anziani',
+  description:
+    'Come raggiungere il Residence V.G in Via Francesco Petrarca 14, Cabiate (CO). Indicazioni in auto, treno e mezzi pubblici. Residenza anziani autosufficienti in provincia di Como.',
+  path: '/dove-siamo',
+  keywords: [
+    'come arrivare residenza anziani Cabiate',
+    'Residence V.G indirizzo Como',
+    'struttura anziani Brianza mappa',
+  ],
+  ogImage: '/images/IMG_4208.webp',
+});
 
 export default function DoveSiamoPage() {
   const { contact } = siteConfig;
 
   return (
     <div className="min-h-screen bg-linen-100 pb-24 pt-24">
+      <BreadcrumbListSchema
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Dove siamo', path: '/dove-siamo' },
+        ]}
+      />
       <div className="container-site">
+        <Breadcrumbs
+          items={[
+            { label: 'Home', href: '/' },
+            { label: 'Dove siamo' },
+          ]}
+        />
+
         {/* Header */}
         <div className="mb-12 text-center">
           <p className="mb-3 font-sans text-sm font-semibold uppercase tracking-widest text-gold">
             Vieni a trovarci
           </p>
-          <h1 className="heading-display text-display-sm md:text-display-md">
+          <h1 className="sr-only">Come Raggiungere Residence V.G a Cabiate</h1>
+          <h2 className="heading-display text-display-sm md:text-display-md">
             Dove siamo
-          </h1>
+          </h2>
           <div className="gold-divider mt-6" />
           <p className="mx-auto mt-5 max-w-xl font-sans text-base text-ink-light">
             Siamo nel cuore della Brianza comasca, facilmente raggiungibili in auto, in treno o con i mezzi pubblici.
@@ -103,7 +127,7 @@ export default function DoveSiamoPage() {
         <div className="mt-12 overflow-hidden rounded-2xl">
           <Image
             src="/images/IMG_4208.webp"
-            alt="Esterno Residence V.G — Via Francesco Petrarca 14 Cabiate"
+            alt="Esterno residenza anziani Cabiate — struttura anziani autosufficienti Residence V.G"
             width={1200}
             height={400}
             className="h-56 w-full object-cover md:h-80"

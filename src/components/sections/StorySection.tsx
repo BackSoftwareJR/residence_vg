@@ -30,7 +30,7 @@ export default function StorySection() {
             <motion.div style={{ y: imgY }} className="relative h-[480px] md:h-[560px]">
               <Image
                 src="/images/foto_orizzontali/IMG_2386.webp"
-                alt="Camera ospite Residence V.G — calda e luminosa"
+                alt="Camera ospite residenza anziani Cabiate — casa famiglia anziani Como"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"

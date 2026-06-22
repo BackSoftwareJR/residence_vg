@@ -1,11 +1,15 @@
 import type { Metadata } from 'next';
 import { siteConfig } from '@/data/content';
+import { createPageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: 'Privacy Policy',
-  description: 'Informativa sulla privacy di Residence V.G',
-  robots: { index: false, follow: false },
-};
+export const metadata: Metadata = createPageMetadata({
+  title: 'Privacy Policy | Residence V.G Cabiate',
+  description:
+    'Informativa sulla privacy del sito Residence V.G, residenza per anziani autosufficienti a Cabiate (CO). Titolare del trattamento: Residence per Anziani Group V.G.',
+  path: '/privacy',
+  keywords: ['privacy policy Residence V.G', 'informativa privacy residenza anziani'],
+  noIndex: true,
+});
 
 export default function PrivacyPage() {
   return (

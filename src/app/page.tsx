@@ -11,19 +11,30 @@ import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import GalleryPreview from '@/components/sections/GalleryPreview';
 import FAQSection from '@/components/sections/FAQSection';
 import VisitSection from '@/components/sections/VisitSection';
-import JsonLd from '@/components/JsonLd';
-import { siteConfig } from '@/data/content';
+import { NursingHomeSchema, OrganizationSchema, FAQPageSchema } from '@/components/JsonLd';
+import { faqs } from '@/data/content';
+import { createPageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: siteConfig.seo.defaultTitle,
-  description: siteConfig.seo.defaultDescription,
-  alternates: { canonical: '/' },
-};
+export const metadata: Metadata = createPageMetadata({
+  title: 'Residenza Anziani Autosufficienti Cabiate Como | Residence V.G',
+  description:
+    'Residence V.G: residenza per anziani autosufficienti e parzialmente autosufficienti a Cabiate (CO). Max 10 ospiti, assistenza H24, ambiente familiare. Prenota una visita gratuita.',
+  path: '/',
+  keywords: [
+    'residenza anziani Cabiate',
+    'casa famiglia anziani Como',
+    'anziani autosufficienti Brianza',
+    'residence anziani provincia Como',
+    'Residence V.G',
+  ],
+});
 
 export default function HomePage() {
   return (
     <>
-      <JsonLd />
+      <NursingHomeSchema />
+      <OrganizationSchema />
+      <FAQPageSchema items={faqs} />
       <Hero />
       <StatsBar />
       <ManifestoSection />

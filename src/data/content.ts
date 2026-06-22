@@ -314,11 +314,11 @@ export type GalleryCategory = "tutte" | "camere" | "spazi-comuni" | "esterni" | 
 
 export const galleryImages = [
   // Mix: nuove (spazi) + vecchie (vita) interleaved
-  { src: "/images/6vg.webp",                           alt: "Terrazza Residence V.G — arredata con vista su Cabiate",                          category: "esterni"      as GalleryCategory, featured: true  },
-  { src: "/images/foto_orizzontali/IMG_2382.webp",      alt: "Sala comune — ospiti e operatori nel pomeriggio",                                 category: "spazi-comuni" as GalleryCategory, featured: true  },
-  { src: "/images/4vg.webp",                           alt: "Camera matrimoniale — luce del mattino sulle tende bianche",                       category: "camere"       as GalleryCategory, featured: true  },
+  { src: "/images/6vg.webp",                           alt: "Terrazza residenza anziani Cabiate — vista su Cabiate (Como)",                          category: "esterni"      as GalleryCategory, featured: true  },
+  { src: "/images/foto_orizzontali/IMG_2382.webp",      alt: "Sala comune casa famiglia anziani Como — ospiti e operatori",                                 category: "spazi-comuni" as GalleryCategory, featured: true  },
+  { src: "/images/4vg.webp",                           alt: "Camera matrimoniale struttura anziani autosufficienti Cabiate",                       category: "camere"       as GalleryCategory, featured: true  },
   { src: "/images/foto_orizzontali/IMG_2387.webp",      alt: "Attività motoria — esercizi guidati dall'operatrice in sala comune",              category: "spazi-comuni" as GalleryCategory, featured: true  },
-  { src: "/images/3vg.webp",                           alt: "Sala pranzo — apparecchiata e luminosa con i fiori sul balcone",                   category: "spazi-comuni" as GalleryCategory, featured: true  },
+  { src: "/images/3vg.webp",                           alt: "Sala pranzo residenza anziani Cabiate — ambiente familiare luminoso",                   category: "spazi-comuni" as GalleryCategory, featured: true  },
   { src: "/images/foto_orizzontali/IMG_2392.webp",      alt: "Gioco di carte in compagnia — un pomeriggio sereno a Residence V.G",              category: "spazi-comuni" as GalleryCategory, featured: true  },
   { src: "/images/7vg.webp",                           alt: "Camera con terrazzo — la porta aperta sul verde di Cabiate",                       category: "camere"       as GalleryCategory, featured: true  },
   { src: "/images/foto_orizzontali/IMG_2389.webp",      alt: "Attività creative — operatori e ospiti che disegnano insieme",                    category: "spazi-comuni" as GalleryCategory, featured: true  },
@@ -333,8 +333,8 @@ export const galleryImages = [
   { src: "/images/foto_orizzontali/IMG_2388.webp",      alt: "Ginnastica in sala — un ospite con le braccia aperte durante gli esercizi",       category: "spazi-comuni" as GalleryCategory, featured: false },
   { src: "/images/foto_orizzontali/IMG_2385.webp",      alt: "Il pomeriggio insieme — ospiti e staff nella sala comune",                        category: "spazi-comuni" as GalleryCategory, featured: false },
   { src: "/images/foto_orizzontali/IMG_2391.webp",      alt: "Attività di gruppo — ospiti e operatori al tavolo della sala pranzo",             category: "spazi-comuni" as GalleryCategory, featured: false },
-  { src: "/images/IMG_4203.webp",                       alt: "Residence V.G — la struttura a Cabiate",                                          category: "esterni"      as GalleryCategory, featured: false },
-  { src: "/images/IMG_4208.webp",                       alt: "Residence V.G — esterno della palazzina a Cabiate",                               category: "esterni"      as GalleryCategory, featured: false },
+  { src: "/images/IMG_4203.webp",                       alt: "Residenza anziani Cabiate — struttura anziani autosufficienti Residence V.G",                                          category: "esterni"      as GalleryCategory, featured: false },
+  { src: "/images/IMG_4208.webp",                       alt: "Esterno casa famiglia anziani Como — palazzina Residence V.G Cabiate",                               category: "esterni"      as GalleryCategory, featured: false },
 ] as const;
 
 export const galleryCategories: { id: GalleryCategory; label: string }[] = [

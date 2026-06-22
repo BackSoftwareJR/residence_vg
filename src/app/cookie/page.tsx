@@ -1,10 +1,14 @@
 import type { Metadata } from 'next';
+import { createPageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: 'Cookie Policy',
-  description: 'Cookie policy di Residence V.G',
-  robots: { index: false, follow: false },
-};
+export const metadata: Metadata = createPageMetadata({
+  title: 'Cookie Policy | Residence V.G Cabiate',
+  description:
+    'Cookie policy del sito Residence V.G. Informazioni sull\'utilizzo dei cookie e sulle preferenze di navigazione per il sito della residenza anziani a Cabiate (CO).',
+  path: '/cookie',
+  keywords: ['cookie policy Residence V.G', 'cookie sito residenza anziani'],
+  noIndex: true,
+});
 
 export default function CookiePage() {
   return (

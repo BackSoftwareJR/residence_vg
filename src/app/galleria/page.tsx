@@ -1,41 +1,32 @@
-'use client';
+import type { Metadata } from 'next';
+import { createPageMetadata } from '@/lib/seo';
+import { BreadcrumbListSchema } from '@/components/JsonLd';
+import GalleriaClient from './GalleriaClient';
 
-import { useState } from 'react';
-import { AnimatePresence } from 'framer-motion';
-import { PortfolioGallery } from '@/components/ui/portfolio-gallery';
-import { GalleryLightbox } from '@/components/ui/gallery-lightbox';
-import { galleryImages } from '@/data/content';
-
-const images = galleryImages.map((img) => ({
-  src: img.src,
-  alt: img.alt,
-}));
+export const metadata: Metadata = createPageMetadata({
+  title: 'Galleria Foto - Residenza Anziani Cabiate | Residence V.G',
+  description:
+    'Scopri gli spazi del Residence V.G a Cabiate (CO): camere luminose, sale comuni, giardino e terrazzo. Residenza per anziani autosufficienti in provincia di Como.',
+  path: '/galleria',
+  keywords: [
+    'galleria residenza anziani Cabiate',
+    'foto casa famiglia Como',
+    'struttura anziani autosufficienti Brianza',
+  ],
+  ogImage: '/images/6vg.webp',
+});
 
 export default function GalleriaPage() {
-  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
-
   return (
-    <main className="min-h-screen overflow-x-hidden bg-[#0E1810]">
-      <PortfolioGallery
-        title="Galleria fotografica"
-        archiveButton={{
-          text: 'Prenota una visita',
-          href: '/#contatti',
-        }}
-        images={images}
-        onImageClick={setLightboxIndex}
-        className="min-h-screen bg-[#0E1810]"
+    <div className="min-h-screen overflow-x-hidden bg-[#0E1810]">
+      <BreadcrumbListSchema
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Galleria', path: '/galleria' },
+        ]}
       />
-
-      <AnimatePresence>
-        {lightboxIndex !== null && (
-          <GalleryLightbox
-            images={images}
-            initialIndex={lightboxIndex}
-            onClose={() => setLightboxIndex(null)}
-          />
-        )}
-      </AnimatePresence>
-    </main>
+      <h1 className="sr-only">Galleria Fotografica - Residenza Anziani Cabiate</h1>
+      <GalleriaClient />
+    </div>
   );
 }

@@ -10,6 +10,7 @@ const quickLinks = [
   { label: 'La nostra giornata', href: '/#' },
   { label: 'Galleria',       href: '/galleria' },
   { label: 'Dove siamo',     href: '/dove-siamo' },
+  { label: 'Blog',           href: '/blog' },
   { label: 'Prenota visita', href: '/#contatti' },
 ];
 

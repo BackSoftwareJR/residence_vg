@@ -7,11 +7,11 @@ import { Phone, MessageCircle, ArrowDown } from 'lucide-react';
 import { siteConfig } from '@/data/content';
 
 const slides = [
-  { src: '/images/6vg.webp',                          alt: 'Terrazza Residence V.G',           caption: 'La terrazza, aperta ogni mattina' },
-  { src: '/images/foto_orizzontali/IMG_2382.webp',     alt: 'Vita quotidiana Residence V.G',    caption: 'Momenti veri, ogni pomeriggio' },
-  { src: '/images/4vg.webp',                          alt: 'Camera Residence V.G',              caption: 'Il tuo spazio, la tua luce' },
-  { src: '/images/foto_orizzontali/IMG_2387.webp',     alt: 'Attività Residence V.G',           caption: 'Movimento, vitalità, buonumore' },
-  { src: '/images/3vg.webp',                          alt: 'Sala pranzo Residence V.G',         caption: 'A tavola, ogni giorno insieme' },
+  { src: '/images/6vg.webp',                          alt: 'Terrazza residenza anziani Cabiate — Residence V.G',           caption: 'La terrazza, aperta ogni mattina' },
+  { src: '/images/foto_orizzontali/IMG_2382.webp',     alt: 'Vita quotidiana casa famiglia anziani Como',                    caption: 'Momenti veri, ogni pomeriggio' },
+  { src: '/images/4vg.webp',                          alt: 'Camera struttura anziani autosufficienti Cabiate',              caption: 'Il tuo spazio, la tua luce' },
+  { src: '/images/foto_orizzontali/IMG_2387.webp',     alt: 'Attività motoria residenza anziani Cabiate',                   caption: 'Movimento, vitalità, buonumore' },
+  { src: '/images/3vg.webp',                          alt: 'Sala pranzo casa famiglia anziani Como',                        caption: 'A tavola, ogni giorno insieme' },
 ];
 
 export default function Hero() {
@@ -32,6 +32,9 @@ export default function Hero() {
 
   return (
     <section className="relative flex min-h-[100dvh] flex-col overflow-hidden" aria-label="Benvenuto">
+      <h1 className="sr-only">
+        Residenza per Anziani Autosufficienti a Cabiate (Como) - Residence V.G
+      </h1>
       {/* ── Carousel background ── */}
       <div className="absolute inset-0 z-0">
         <AnimatePresence initial={false}>
@@ -101,7 +104,7 @@ export default function Hero() {
         </motion.p>
 
         {/* Headline */}
-        <h1
+        <h2
           className="font-display font-semibold text-white"
           style={{ fontSize: 'clamp(2.8rem, 13vw, 4rem)', lineHeight: 1.04, letterSpacing: '-0.03em' }}
         >
@@ -116,7 +119,7 @@ export default function Hero() {
               {word}
             </motion.span>
           ))}
-        </h1>
+        </h2>
 
         {/* Gold divider */}
         <motion.div
@@ -180,7 +183,7 @@ export default function Hero() {
         </motion.div>
 
         {/* Headline — word reveal */}
-        <h1
+        <h2
           className="font-display font-semibold text-white text-balance"
           style={{ fontSize: 'clamp(3rem, 7.5vw, 5.5rem)', lineHeight: 1.06, letterSpacing: '-0.025em' }}
         >
@@ -195,7 +198,7 @@ export default function Hero() {
               {word}
             </motion.span>
           ))}
-        </h1>
+        </h2>
 
         {/* Sub */}
         <motion.p

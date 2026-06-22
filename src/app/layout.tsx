@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Cormorant_Garamond, Inter } from 'next/font/google';
 import './globals.css';
 import { siteConfig } from '@/data/content';
+import { CANONICAL_BASE } from '@/lib/seo';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import FloatingCTA from '@/components/FloatingCTA';
@@ -20,17 +21,19 @@ const sans = Inter({
   display: 'swap',
 });
 
+const googleSiteVerification = process.env.GOOGLE_SITE_VERIFICATION;
+
 export const metadata: Metadata = {
   title: {
     default: siteConfig.seo.defaultTitle,
     template: siteConfig.seo.titleTemplate,
   },
   description: siteConfig.seo.defaultDescription,
-  metadataBase: new URL(siteConfig.url),
+  metadataBase: new URL(CANONICAL_BASE),
   openGraph: {
     type: 'website',
     locale: 'it_IT',
-    url: siteConfig.url,
+    url: CANONICAL_BASE,
     siteName: siteConfig.name,
     title: siteConfig.seo.defaultTitle,
     description: siteConfig.seo.defaultDescription,
@@ -52,6 +55,9 @@ export const metadata: Metadata = {
     follow: true,
     googleBot: { index: true, follow: true },
   },
+  ...(googleSiteVerification
+    ? { verification: { google: googleSiteVerification } }
+    : {}),
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
