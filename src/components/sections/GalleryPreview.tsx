@@ -53,7 +53,6 @@ function GallerySlideshow({
             fill
             className={`object-cover transition-transform duration-[1.2s] group-hover:scale-[1.04] ${imageClassName ?? ''}`}
             sizes="(max-width: 768px) 100vw, 45vw"
-            priority={index === 0}
           />
         </motion.div>
       </AnimatePresence>

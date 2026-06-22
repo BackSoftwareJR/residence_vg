@@ -105,7 +105,7 @@ function DailyRoutineDesktop() {
             className="absolute inset-0"
           >
             <motion.div style={{ y: imgY }} className="absolute inset-0 scale-110 origin-center">
-              <Image src={cfg.img} alt={slot.title} fill priority={activeIdx < 3} sizes="100vw" className="object-cover" />
+              <Image src={cfg.img} alt={slot.title} fill priority={activeIdx === 0} sizes="100vw" className="object-cover" />
             </motion.div>
           </motion.div>
         </AnimatePresence>
@@ -239,7 +239,7 @@ function DailyRoutineMobile() {
               fill
               className="object-cover"
               sizes="100vw"
-              priority={activeIdx < 2}
+              priority={activeIdx === 0}
             />
           </motion.div>
         </AnimatePresence>

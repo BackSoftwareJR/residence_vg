@@ -189,7 +189,6 @@ function ValuesMobile() {
               fill
               className="object-cover"
               sizes="100vw"
-              priority={activeIdx === 0}
             />
           </motion.div>
         </AnimatePresence>

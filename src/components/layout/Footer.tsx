@@ -1,8 +1,12 @@
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import { siteConfig, assets } from '@/data/content';
-import LocationMap from '@/components/ui/location-map';
 import { Phone, Mail, MapPin, Clock, MessageCircle } from 'lucide-react';
+
+const LocationMap = dynamic(() => import('@/components/ui/location-map'), {
+  loading: () => <div className="h-[120px] rounded-xl bg-linen-200" aria-hidden="true" />,
+});
 
 const quickLinks = [
   { label: 'Chi siamo',      href: '/#chi-siamo' },

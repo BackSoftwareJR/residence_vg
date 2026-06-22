@@ -1,22 +1,26 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
+import dynamic from 'next/dynamic';
 import { Cormorant_Garamond, Inter } from 'next/font/google';
 import './globals.css';
 import { siteConfig } from '@/data/content';
 import { CANONICAL_BASE } from '@/lib/seo';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
-import FloatingCTA from '@/components/FloatingCTA';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
+
+const FloatingCTA = dynamic(() => import('@/components/FloatingCTA'), { ssr: false });
 
 const display = Cormorant_Garamond({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
   variable: '--font-display',
   display: 'swap',
+  preload: true,
 });
 
 const sans = Inter({
   subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
   variable: '--font-sans',
   display: 'swap',
 });
@@ -45,7 +49,6 @@ export const metadata: Metadata = {
     description: siteConfig.seo.defaultDescription,
     images: [siteConfig.seo.ogImage],
   },
-  themeColor: siteConfig.seo.themeColor,
   icons: {
     icon: '/images/favicon.png',
     apple: '/images/favicon.png',
@@ -60,9 +63,17 @@ export const metadata: Metadata = {
     : {}),
 };
 
+export const viewport: Viewport = {
+  themeColor: siteConfig.seo.themeColor,
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="it" className={`${display.variable} ${sans.variable}`}>
+      <head>
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.google.com" />
+      </head>
       <body>
         <GoogleAnalytics />
         <a href="#main-content" className="skip-link">

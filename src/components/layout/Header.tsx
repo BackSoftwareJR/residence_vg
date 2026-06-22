@@ -62,6 +62,7 @@ export default function Header() {
                 alt={siteConfig.name}
                 width={44}
                 height={44}
+                priority
                 className="h-9 w-auto md:h-11"
               />
             </div>

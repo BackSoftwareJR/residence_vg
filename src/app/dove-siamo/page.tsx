@@ -1,11 +1,15 @@
 import type { Metadata } from 'next';
+import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import { siteConfig } from '@/data/content';
-import LocationMap from '@/components/ui/location-map';
 import { createPageMetadata } from '@/lib/seo';
 import { BreadcrumbListSchema } from '@/components/JsonLd';
 import Breadcrumbs from '@/components/blog/Breadcrumbs';
 import { Phone, Mail, MapPin, Clock, MessageSquare } from 'lucide-react';
+
+const LocationMap = dynamic(() => import('@/components/ui/location-map'), {
+  loading: () => <div className="h-[420px] rounded-2xl bg-linen-200" aria-hidden="true" />,
+});
 
 export const metadata: Metadata = createPageMetadata({
   title: 'Come Arrivare a Residence V.G - Cabiate (CO) | Residenza Anziani',
@@ -130,6 +134,8 @@ export default function DoveSiamoPage() {
             alt="Esterno residenza anziani Cabiate — struttura anziani autosufficienti Residence V.G"
             width={1200}
             height={400}
+            sizes="(max-width: 768px) 100vw, 1200px"
+            loading="lazy"
             className="h-56 w-full object-cover md:h-80"
           />
         </div>

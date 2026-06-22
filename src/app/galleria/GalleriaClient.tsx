@@ -1,10 +1,15 @@
 'use client';
 
 import { useState } from 'react';
+import dynamic from 'next/dynamic';
 import { AnimatePresence } from 'framer-motion';
 import { PortfolioGallery } from '@/components/ui/portfolio-gallery';
-import { GalleryLightbox } from '@/components/ui/gallery-lightbox';
 import { galleryImages } from '@/data/content';
+
+const GalleryLightbox = dynamic(
+  () => import('@/components/ui/gallery-lightbox').then((mod) => mod.GalleryLightbox),
+  { ssr: false },
+);
 
 const images = galleryImages.map((img) => ({
   src: img.src,
